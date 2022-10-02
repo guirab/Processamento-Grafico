@@ -68,7 +68,7 @@ int main()
 //#endif
 
 	// Criação da janela GLFW
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Ola Triangulo! - Guilherme Rabelo", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Ola Triangulo!", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Fazendo o registro da função de callback para a janela GLFW
@@ -137,8 +137,7 @@ int main()
 
 		// Chamada de desenho - drawcall
 		// Poligono Preenchido - GL_TRIANGLES
-		glUniform4f(colorLoc, 1.0f, 8.0f, 0.5f, 0.0f); //enviando cor para variável uniform inputColor
-		glBindVertexArray(VAO);
+		glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 
 		// Chamada de desenho - drawcall
@@ -252,10 +251,10 @@ int setupGeometry()
 		 -0.5f, 0.8f, 0.0f,
 		 -0.3f, 0.5f, 0.0f,
 		 -0.7f, 0.5f, 0.0f,
-		// segundo triangulo
-		0.5f, 0.8f, 0.0f,
-		0.3f, 0.5f, 0.0f,
-		0.7f, 0.5f, 0.0f,
+		 // segundo triangulo
+		 0.5f, 0.8f, 0.0f,
+		 0.3f, 0.5f, 0.0f,
+		 0.7f, 0.5f, 0.0f,
 	};
 
 	GLuint VBO, VAO;
